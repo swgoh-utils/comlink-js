@@ -1,0 +1,34 @@
+image: node:latest
+
+stages:
+  - setup
+  - test
+  - release
+
+cache:
+  paths:
+    - node_modules/
+
+setup:
+  stage: setup
+  script:
+    - npm install
+
+test:
+  stage: test
+  script:
+    - npm run test
+  coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/
+  artifacts:
+    paths:
+    - coverage/
+    expire_in: 7 days
+
+npm-publish:
+  # using image node:12 to avoid semantic release breaking in node 13
+  image: node:16
+  stage: release
+  script:
+    - npx semantic-release
+  only:
+    - master
