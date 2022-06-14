@@ -1,0 +1,32 @@
+{
+  "name": "@swgoh-tools/comlink",
+  "version": "1.0.0",
+  "description": "A js library for connecting to swgoh-comlink and associated swgoh-tools",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/swgoh-tools/comlink-js.git"
+  },
+  "files": [
+    "index.js"
+  ],
+  "author": "swgoh.tools@proton.me",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/swgoh-tools/comlink-js/issues"
+  },
+  "homepage": "https://gitlab.com/swgoh-tools/comlink-js#readme",
+  "dependencies": {
+    "got": "^11.8.5"
+  },
+  "devDependencies": {
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/gitlab": "^9.3.2",
+    "conventional-changelog-conventionalcommits": "^5.0.0",
+    "jest": "^28.1.1",
+    "semantic-release": "^19.0.3"
+  }
+}

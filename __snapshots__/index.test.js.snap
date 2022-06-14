@@ -1,0 +1,233 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ComlinkStub API bindings get stub method getEnums should get the appropriate path 1`] = `
+Array [
+  "http://localhost:3000/enums",
+  Object {
+    "decompress": true,
+    "method": "GET",
+    "resolveBodyOnly": true,
+    "responseType": "json",
+  },
+]
+`;
+
+exports[`ComlinkStub API bindings it should disable asking for compressed responses if specified it should disable compression for GET methods 1`] = `
+Array [
+  "http://localhost:3000/enums",
+  Object {
+    "decompress": false,
+    "method": "GET",
+    "resolveBodyOnly": true,
+    "responseType": "json",
+  },
+]
+`;
+
+exports[`ComlinkStub API bindings it should disable asking for compressed responses if specified it should disable compression for POST methods 1`] = `
+Array [
+  "http://localhost:3000/metadata",
+  Object {
+    "decompress": false,
+    "headers": Object {},
+    "json": undefined,
+    "method": "POST",
+    "resolveBodyOnly": true,
+    "responseType": "json",
+  },
+]
+`;
+
+exports[`ComlinkStub API bindings post stub method getGameData should create the payload, and send it 1`] = `
+Array [
+  "http://localhost:3000/data",
+  Object {
+    "decompress": true,
+    "headers": Object {},
+    "json": Object {
+      "payload": Object {
+        "includePveUnits": "false",
+        "requestSegment": 2,
+        "version": "versionString",
+      },
+    },
+    "method": "POST",
+    "resolveBodyOnly": true,
+    "responseType": "json",
+  },
+]
+`;
+
+exports[`ComlinkStub API bindings post stub method getLocalizationBundle should create the payload, and send it 1`] = `
+Array [
+  "http://localhost:3000/localization",
+  Object {
+    "decompress": true,
+    "headers": Object {},
+    "json": Object {
+      "payload": Object {
+        "id": "idString",
+      },
+    },
+    "method": "POST",
+    "resolveBodyOnly": true,
+    "responseType": "json",
+  },
+]
+`;
+
+exports[`ComlinkStub API bindings post stub method getMetaData should create the payload, and send it 1`] = `
+Array [
+  "http://localhost:3000/metadata",
+  Object {
+    "decompress": true,
+    "headers": Object {},
+    "json": undefined,
+    "method": "POST",
+    "resolveBodyOnly": true,
+    "responseType": "json",
+  },
+]
+`;
+
+exports[`ComlinkStub API bindings post stub method getPlayer should create the payload, and send it 1`] = `
+Array [
+  "http://localhost:3000/player",
+  Object {
+    "decompress": true,
+    "headers": Object {},
+    "json": Object {
+      "payload": Object {
+        "allyCode": "123456789",
+      },
+    },
+    "method": "POST",
+    "resolveBodyOnly": true,
+    "responseType": "json",
+  },
+]
+`;
+
+exports[`ComlinkStub API bindings post stub method getPlayer should create the payload, and send it 2`] = `
+Array [
+  "http://localhost:3000/player",
+  Object {
+    "decompress": true,
+    "headers": Object {},
+    "json": Object {
+      "payload": Object {
+        "playerId": "aPlayerId",
+      },
+    },
+    "method": "POST",
+    "resolveBodyOnly": true,
+    "responseType": "json",
+  },
+]
+`;
+
+exports[`ComlinkStub API bindings post stub method getPlayerArenaProfile should create the payload, and send it 1`] = `
+Array [
+  "http://localhost:3000/playerArena",
+  Object {
+    "decompress": true,
+    "headers": Object {},
+    "json": Object {
+      "payload": Object {
+        "allyCode": "123456789",
+        "playerDetailsOnly": false,
+      },
+    },
+    "method": "POST",
+    "resolveBodyOnly": true,
+    "responseType": "json",
+  },
+]
+`;
+
+exports[`ComlinkStub API bindings post stub method getPlayerArenaProfile should create the payload, and send it 2`] = `
+Array [
+  "http://localhost:3000/playerArena",
+  Object {
+    "decompress": true,
+    "headers": Object {},
+    "json": Object {
+      "payload": Object {
+        "playerDetailsOnly": true,
+        "playerId": "aPlayerId",
+      },
+    },
+    "method": "POST",
+    "resolveBodyOnly": true,
+    "responseType": "json",
+  },
+]
+`;
+
+exports[`swgoh-stats binding it should call the stats API 1`] = `
+Array [
+  "abc://xyz:42/api",
+  Object {
+    "decompress": true,
+    "json": Array [
+      Object {
+        "foo": "bar",
+      },
+    ],
+    "method": "POST",
+    "resolveBodyOnly": true,
+    "responseType": "json",
+  },
+]
+`;
+
+exports[`swgoh-stats binding it should handle flags 1`] = `
+Array [
+  "abc://xyz:42/api?flags=calcGP,gameStyle",
+  Object {
+    "decompress": true,
+    "json": Array [
+      Object {
+        "foo": "bar",
+      },
+    ],
+    "method": "POST",
+    "resolveBodyOnly": true,
+    "responseType": "json",
+  },
+]
+`;
+
+exports[`swgoh-stats binding it should handle flags and languages 1`] = `
+Array [
+  "abc://xyz:42/api?flags=onlyGP&language=eng_us",
+  Object {
+    "decompress": true,
+    "json": Array [
+      Object {
+        "foo": "bar",
+      },
+    ],
+    "method": "POST",
+    "resolveBodyOnly": true,
+    "responseType": "json",
+  },
+]
+`;
+
+exports[`swgoh-stats binding it should handle languages 1`] = `
+Array [
+  "abc://xyz:42/api?language=eng_us",
+  Object {
+    "decompress": true,
+    "json": Array [
+      Object {
+        "foo": "bar",
+      },
+    ],
+    "method": "POST",
+    "resolveBodyOnly": true,
+    "responseType": "json",
+  },
+]
+`;
