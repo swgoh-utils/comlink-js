@@ -1,6 +1,6 @@
 {
   "name": "@swgoh-tools/comlink",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A js library for connecting to swgoh-comlink and associated swgoh-tools",
   "main": "index.js",
   "scripts": {
