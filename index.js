@@ -92,8 +92,9 @@ module.exports = class ComlinkStub {
     });
   };
 
-  async getLocalizationBundle(id) {
+  async getLocalizationBundle(id, unzip = false) {
     return await this._postRequestPromiseAPI(`/localization`, {
+      "unzip": unzip ? true : false,
       "payload": {
         "id": id
       }
