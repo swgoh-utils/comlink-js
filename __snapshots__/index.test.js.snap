@@ -68,6 +68,26 @@ Array [
       "payload": Object {
         "id": "idString",
       },
+      "unzip": false,
+    },
+    "method": "POST",
+    "resolveBodyOnly": true,
+    "responseType": "json",
+  },
+]
+`;
+
+exports[`ComlinkStub API bindings post stub method getLocalizationBundle should create the payload, and send it 2`] = `
+Array [
+  "http://localhost:3000/localization",
+  Object {
+    "decompress": true,
+    "headers": Object {},
+    "json": Object {
+      "payload": Object {
+        "id": "idString",
+      },
+      "unzip": true,
     },
     "method": "POST",
     "resolveBodyOnly": true,
