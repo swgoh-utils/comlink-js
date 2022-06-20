@@ -19,6 +19,10 @@ const postMethodArray = [
     path: '/localization',
     parameters: ['idString'],
   }], [{
+    method: 'getLocalizationBundle',
+    path: '/localization',
+    parameters: ['idString', true],
+  }], [{
     method: 'getMetaData',
     path: '/metadata',
     parameters: []
