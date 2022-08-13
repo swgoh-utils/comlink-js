@@ -2,9 +2,15 @@ jest.mock('got');
 const got = require('got');
 const ComlinkStub = require('./index');
 
+const accessKey = 'my-access-key';
+const secretKey = 'my-secret-key';
+const currentTime = 1660422866714;
+
 let clientStub;
 const defaultOptions = {
   url: 'http://localhost:3000',
+  accessKey: '',
+  secretKey: '',
   compression: true
 };
 const successResponse = 'Success!';
@@ -108,16 +114,25 @@ describe('swgoh-stats binding', () => {
 
 describe('ComlinkStub API bindings', () => {
   beforeEach(() => {
+    jest.spyOn(Date.prototype, 'getTime').mockImplementation(() => {
+      return currentTime;
+    });
+
     got.mockImplementation(() => {
       return Promise.resolve(successResponse);
     });
 
-    clientStub = new ComlinkStub();
+    clientStub = new ComlinkStub({
+      accessKey: accessKey,
+      secretKey: secretKey
+    });
   });
 
   test("it should accept initialization parameters", () => {
     const initOptions = {
       url: 'abc://xyz:42',
+      accessKey: 'tHe-AcCeSs-KeY',
+      secretKey: 'ThE-sEcReT-kEy',
       compression: false
     };
     clientStub = new ComlinkStub(initOptions);

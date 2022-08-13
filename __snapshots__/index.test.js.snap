@@ -43,7 +43,10 @@ Array [
   "http://localhost:3000/data",
   Object {
     "decompress": true,
-    "headers": Object {},
+    "headers": Object {
+      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=43cac83fc28147d8102aaf7c3115ce7570154586baea26786f1b10bf11686794",
+      "X-Date": "1660422866714",
+    },
     "json": Object {
       "payload": Object {
         "includePveUnits": "false",
@@ -63,7 +66,10 @@ Array [
   "http://localhost:3000/localization",
   Object {
     "decompress": true,
-    "headers": Object {},
+    "headers": Object {
+      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=efb1ec3382f33032741c45b64b1c70aec877ce55645713c7ecc1a7fe95a393a6",
+      "X-Date": "1660422866714",
+    },
     "json": Object {
       "payload": Object {
         "id": "idString",
@@ -82,7 +88,10 @@ Array [
   "http://localhost:3000/localization",
   Object {
     "decompress": true,
-    "headers": Object {},
+    "headers": Object {
+      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=ff30d647181844239077da3d244e70cb246b59158ed048da9e0993137f53cff9",
+      "X-Date": "1660422866714",
+    },
     "json": Object {
       "payload": Object {
         "id": "idString",
@@ -101,7 +110,10 @@ Array [
   "http://localhost:3000/metadata",
   Object {
     "decompress": true,
-    "headers": Object {},
+    "headers": Object {
+      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=c06d27fe2ec2a682cc79864b61df8cb4372a6df21b3e716ead52f2958d166e53",
+      "X-Date": "1660422866714",
+    },
     "json": undefined,
     "method": "POST",
     "resolveBodyOnly": true,
@@ -115,7 +127,10 @@ Array [
   "http://localhost:3000/player",
   Object {
     "decompress": true,
-    "headers": Object {},
+    "headers": Object {
+      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=86b6f2bea2c84f0b593d961bfe3571ea05ab8913283d0d5702c9fe093c5e57cb",
+      "X-Date": "1660422866714",
+    },
     "json": Object {
       "payload": Object {
         "allyCode": "123456789",
@@ -133,7 +148,10 @@ Array [
   "http://localhost:3000/player",
   Object {
     "decompress": true,
-    "headers": Object {},
+    "headers": Object {
+      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=9a02a4d5304cf6a70fdcb34515252574ca66cd3ad04d77d23243b94abf141882",
+      "X-Date": "1660422866714",
+    },
     "json": Object {
       "payload": Object {
         "playerId": "aPlayerId",
@@ -151,7 +169,10 @@ Array [
   "http://localhost:3000/playerArena",
   Object {
     "decompress": true,
-    "headers": Object {},
+    "headers": Object {
+      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=a14f7fca084d12566fee1c3ed2116f4dc2ee0bdb0f504f428dfc6987db6b321a",
+      "X-Date": "1660422866714",
+    },
     "json": Object {
       "payload": Object {
         "allyCode": "123456789",
@@ -170,7 +191,10 @@ Array [
   "http://localhost:3000/playerArena",
   Object {
     "decompress": true,
-    "headers": Object {},
+    "headers": Object {
+      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=514068104798219277bb6c26df9faafa2bd3a68027fa2dd6a4ef72bcf262a1ba",
+      "X-Date": "1660422866714",
+    },
     "json": Object {
       "payload": Object {
         "playerDetailsOnly": true,
