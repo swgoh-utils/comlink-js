@@ -1,9 +1,32 @@
 const got = require('got');
+const crypto = require('crypto');
+
+// headers are modified in place
+function signPostRequest(accessKey, secretKey, method, uri, headers, body = {}) {
+  // no need to sign if access key and secret key are not present
+  if (accessKey && secretKey) {
+    const hmac = crypto.createHmac('sha256', secretKey);
+    const reqTime = `${new Date().getTime()}`;
+    headers['X-Date'] = reqTime;
+
+    hmac.update(reqTime); // request time
+    hmac.update(method); // verb e.g POST
+    hmac.update(uri); // url e.g /metadata
+
+    const hash = crypto.createHash('md5');
+    hash.update(body ? JSON.stringify(body) : "");
+    hmac.update(hash.digest('hex'));
+
+    headers['Authorization'] = `HMAC-SHA256 Credential=${accessKey},Signature=${hmac.digest('hex')}`;
+  }
+}
 
 module.exports = class ComlinkStub {
   constructor(options = {}) {
     this.url = options.url || 'http://localhost:3000';
     this.statsUrl = options.statsUrl || 'http://localhost:3223';
+    this.accessKey = options.accessKey || '';
+    this.secretKey = options.secretKey || '';
 
     // use provided logger if specified
     this.logger = options.log || console;
@@ -46,6 +69,8 @@ module.exports = class ComlinkStub {
   async _postRequestPromiseAPI(uri, payload) {
     const headers = {};
     const method = 'POST';
+
+    signPostRequest(this.accessKey, this.secretKey, method, uri, headers, payload);
 
     return await got(`${this.url}${uri}`, {
       method: method,
