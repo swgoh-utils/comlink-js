@@ -13,7 +13,10 @@
   "files": [
     "index.js"
   ],
-  "author": "swgoh.tools@proton.me",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "swgoh-utils@proton.me",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/swgoh-utils/comlink-js/issues"
