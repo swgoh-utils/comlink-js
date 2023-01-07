@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/swgoh-tools/comlink-js.git"
+    "url": "git+ssh://git@github.com:swgoh-utils/comlink-js.git"
   },
   "files": [
     "index.js"
@@ -16,15 +16,14 @@
   "author": "swgoh.tools@proton.me",
   "license": "MIT",
   "bugs": {
-    "url": "https://gitlab.com/swgoh-tools/comlink-js/issues"
+    "url": "https://github.com/swgoh-utils/comlink-js/issues"
   },
-  "homepage": "https://gitlab.com/swgoh-tools/comlink-js#readme",
+  "homepage": "https://github.com/swgoh-tools/comlink-js#readme",
   "dependencies": {
     "got": "^11.8.5"
   },
   "devDependencies": {
     "@semantic-release/git": "^10.0.1",
-    "@semantic-release/gitlab": "^9.3.2",
     "conventional-changelog-conventionalcommits": "^5.0.0",
     "jest": "^28.1.1",
     "semantic-release": "^19.0.3"

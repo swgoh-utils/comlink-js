@@ -61,6 +61,50 @@ Array [
 ]
 `;
 
+exports[`ComlinkStub API bindings post stub method getGuild should create the payload, and send it 1`] = `
+Array [
+  "http://localhost:3000/guild",
+  Object {
+    "decompress": true,
+    "headers": Object {
+      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=47f4725e8e703e88e94336472a7aa0d9fb1863ab52c93792b20b325417790955",
+      "X-Date": "1660422866714",
+    },
+    "json": Object {
+      "payload": Object {
+        "guildId": "idString",
+      },
+    },
+    "method": "POST",
+    "resolveBodyOnly": true,
+    "responseType": "json",
+  },
+]
+`;
+
+exports[`ComlinkStub API bindings post stub method getGuildsByName should create the payload, and send it 1`] = `
+Array [
+  "http://localhost:3000/getGuilds",
+  Object {
+    "decompress": true,
+    "headers": Object {
+      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=e55f39abd6958650e56c3f0c1c9aab8179abf8bb30091a2848010d8bd8ef0069",
+      "X-Date": "1660422866714",
+    },
+    "json": Object {
+      "payload": Object {
+        "count": 5,
+        "name": "name",
+        "startIndex": 1,
+      },
+    },
+    "method": "POST",
+    "resolveBodyOnly": true,
+    "responseType": "json",
+  },
+]
+`;
+
 exports[`ComlinkStub API bindings post stub method getLocalizationBundle should create the payload, and send it 1`] = `
 Array [
   "http://localhost:3000/localization",

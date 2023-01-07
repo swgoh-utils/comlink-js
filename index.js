@@ -148,6 +148,32 @@ module.exports = class ComlinkStub {
     });
   };
 
+  async getGuild(guildId) {
+    const requestObject = {
+      "payload": {
+        guildId
+      }
+    };
+
+    return await this._postRequestPromiseAPI(`/guild`, requestObject).catch((error) => {
+      throw (error);
+    });
+  };
+
+  async getGuildsByName(name, startIndex = 0, count = 10) {
+    const requestObject = {
+      "payload": {
+        name,
+        startIndex,
+        count
+      }
+    };
+
+    return await this._postRequestPromiseAPI(`/getGuilds`, requestObject).catch((error) => {
+      throw (error);
+    });
+  };
+
   async getPlayerArenaProfile(allyCode, playerId, playerDetailsOnly = false) {
     const requestObject = {
       "payload": {
