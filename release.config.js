@@ -7,7 +7,12 @@ module.exports = {
     ],
     '@semantic-release/release-notes-generator',
     '@semantic-release/npm',
-    '@semantic-release/git',
-    '@semantic-release/github'
+    '@semantic-release/github',
+    [
+      '@semantic-release/git',
+      {
+        assets: ['package.json', 'package-lock.json'],
+      },
+    ]
   ],
 };
