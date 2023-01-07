@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:swgoh-utils/comlink-js.git"
+    "url": "git+https://github.com/swgoh-utils/comlink-js.git"
   },
   "files": [
     "index.js"
