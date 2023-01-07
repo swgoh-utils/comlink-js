@@ -1,8 +1,8 @@
-# @swgoh-tools/comlink
+# @swgoh-utils/comlink
 
 Usage example:
 ```js
-const ComlinkStub = require('@swgoh-tools/comlink');
+const ComlinkStub = require('@swgoh-utils/comlink');
 const client = new ComlinkStub({
   url: 'http://localhost:3200', // swgoh-comlink service URL
   accessKey: process.env.ACCESS_KEY,
