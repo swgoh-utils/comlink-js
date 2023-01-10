@@ -37,6 +37,10 @@ const postMethodArray = [
     path: '/getGuilds',
     parameters: ['name', 1, 5]
   }], [{
+    method: 'getGuildsByCriteria',
+    path: '/getGuilds',
+    parameters: [{ "foo": "bar" }, 1, 5]
+  }], [{
     method: 'getMetaData',
     path: '/metadata',
     parameters: []
