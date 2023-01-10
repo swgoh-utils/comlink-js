@@ -163,7 +163,23 @@ module.exports = class ComlinkStub {
   async getGuildsByName(name, startIndex = 0, count = 10) {
     const requestObject = {
       "payload": {
+        filterType: 4,
         name,
+        startIndex,
+        count
+      }
+    };
+
+    return await this._postRequestPromiseAPI(`/getGuilds`, requestObject).catch((error) => {
+      throw (error);
+    });
+  };
+
+  async getGuildsByCriteria(searchCriteria = {}, startIndex = 0, count = 10) {
+    const requestObject = {
+      "payload": {
+        filterType: 5,
+        searchCriteria,
         startIndex,
         count
       }

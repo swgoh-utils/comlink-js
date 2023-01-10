@@ -82,18 +82,45 @@ Array [
 ]
 `;
 
+exports[`ComlinkStub API bindings post stub method getGuildsByCriteria should create the payload, and send it 1`] = `
+Array [
+  "http://localhost:3000/getGuilds",
+  Object {
+    "decompress": true,
+    "headers": Object {
+      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=ac6b7c426195aa7eb28b1c8d755a50c768bcac2e071d26d590f1bf5da6d4e013",
+      "X-Date": "1660422866714",
+    },
+    "json": Object {
+      "payload": Object {
+        "count": 5,
+        "filterType": 5,
+        "searchCriteria": Object {
+          "foo": "bar",
+        },
+        "startIndex": 1,
+      },
+    },
+    "method": "POST",
+    "resolveBodyOnly": true,
+    "responseType": "json",
+  },
+]
+`;
+
 exports[`ComlinkStub API bindings post stub method getGuildsByName should create the payload, and send it 1`] = `
 Array [
   "http://localhost:3000/getGuilds",
   Object {
     "decompress": true,
     "headers": Object {
-      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=e55f39abd6958650e56c3f0c1c9aab8179abf8bb30091a2848010d8bd8ef0069",
+      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=97fe9f671840f166c7d5fe0cc2638f05aad59e676ac4cb30ff050adde6fbea8e",
       "X-Date": "1660422866714",
     },
     "json": Object {
       "payload": Object {
         "count": 5,
+        "filterType": 4,
         "name": "name",
         "startIndex": 1,
       },
