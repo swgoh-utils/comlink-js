@@ -38,6 +38,23 @@ Array [
 ]
 `;
 
+exports[`ComlinkStub API bindings post stub method getEvents should create the payload, and send it 1`] = `
+Array [
+  "http://localhost:3000/getEvents",
+  Object {
+    "decompress": true,
+    "headers": Object {
+      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=ded8025b662c17fc23450f95c08a6eba1a41b2716e3303e3e182f4f1a7e06fcd",
+      "X-Date": "1660422866714",
+    },
+    "json": undefined,
+    "method": "POST",
+    "resolveBodyOnly": true,
+    "responseType": "json",
+  },
+]
+`;
+
 exports[`ComlinkStub API bindings post stub method getGameData should create the payload, and send it 1`] = `
 Array [
   "http://localhost:3000/data",

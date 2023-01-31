@@ -103,6 +103,12 @@ module.exports = class ComlinkStub {
     });
   }
 
+  async getEvents() {
+    return await this._postRequestPromiseAPI(`/getEvents`).catch((error) => {
+      throw (error);
+    });
+  };
+
   // segment 0 = all, segment 1 .. n include data split into self contained buckets
   // ie: data for a single collection doesn't span segments
   async getGameData(version, includePveUnits = true, requestSegment = 0) {
