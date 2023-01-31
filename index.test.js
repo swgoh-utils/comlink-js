@@ -29,6 +29,10 @@ const postMethodArray = [
     path: '/localization',
     parameters: ['idString', true],
   }], [{
+    method: 'getEvents',
+    path: '/getEvents',
+    parameters: []
+  }], [{
     method: 'getGuild',
     path: '/guild',
     parameters: ['idString']
