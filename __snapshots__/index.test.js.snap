@@ -84,12 +84,35 @@ Array [
   Object {
     "decompress": true,
     "headers": Object {
-      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=47f4725e8e703e88e94336472a7aa0d9fb1863ab52c93792b20b325417790955",
+      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=c7d40dbfa3291329941c77dd82de072c449a78119b5f56f8a7038498b3744b97",
       "X-Date": "1660422866714",
     },
     "json": Object {
       "payload": Object {
         "guildId": "idString",
+        "includeRecentActivityInfo": false,
+      },
+    },
+    "method": "POST",
+    "resolveBodyOnly": true,
+    "responseType": "json",
+  },
+]
+`;
+
+exports[`ComlinkStub API bindings post stub method getGuild should create the payload, and send it 2`] = `
+Array [
+  "http://localhost:3000/guild",
+  Object {
+    "decompress": true,
+    "headers": Object {
+      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=48eeb4efe3b0b118a9d1a7699572f52145f71fb9e68e291342d5b1a7c5e3b9b4",
+      "X-Date": "1660422866714",
+    },
+    "json": Object {
+      "payload": Object {
+        "guildId": "idString",
+        "includeRecentActivityInfo": true,
       },
     },
     "method": "POST",

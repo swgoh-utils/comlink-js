@@ -37,6 +37,10 @@ const postMethodArray = [
     path: '/guild',
     parameters: ['idString']
   }], [{
+    method: 'getGuild',
+    path: '/guild',
+    parameters: ['idString', true]
+  }], [{
     method: 'getGuildsByName',
     path: '/getGuilds',
     parameters: ['name', 1, 5]
