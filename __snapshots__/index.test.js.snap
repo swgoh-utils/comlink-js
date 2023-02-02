@@ -84,13 +84,13 @@ Array [
   Object {
     "decompress": true,
     "headers": Object {
-      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=c7d40dbfa3291329941c77dd82de072c449a78119b5f56f8a7038498b3744b97",
+      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=62b43cb133a8b22150616c3205fe31b8b7ab431db290307592d7e02799425db0",
       "X-Date": "1660422866714",
     },
     "json": Object {
       "payload": Object {
         "guildId": "idString",
-        "includeRecentActivityInfo": false,
+        "includeRecentGuildActivityInfo": false,
       },
     },
     "method": "POST",
@@ -106,13 +106,13 @@ Array [
   Object {
     "decompress": true,
     "headers": Object {
-      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=48eeb4efe3b0b118a9d1a7699572f52145f71fb9e68e291342d5b1a7c5e3b9b4",
+      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=b030919a3206feb8d7c28eb461b1959149a94b2d391a9e430cfbf5404e42044b",
       "X-Date": "1660422866714",
     },
     "json": Object {
       "payload": Object {
         "guildId": "idString",
-        "includeRecentActivityInfo": true,
+        "includeRecentGuildActivityInfo": true,
       },
     },
     "method": "POST",
