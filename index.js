@@ -154,10 +154,11 @@ module.exports = class ComlinkStub {
     });
   };
 
-  async getGuild(guildId) {
+  async getGuild(guildId, includeRecentActivityInfo = false) {
     const requestObject = {
       "payload": {
-        guildId
+        guildId,
+        includeRecentActivityInfo
       }
     };
 
