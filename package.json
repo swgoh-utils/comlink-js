@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/swgoh-utils/comlink-js#readme",
   "dependencies": {
-    "got": "^11.8.5"
+    "got": "^12.5.3"
   },
   "devDependencies": {
     "@semantic-release/git": "^10.0.1",
