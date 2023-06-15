@@ -212,4 +212,25 @@ module.exports = class ComlinkStub {
       throw (error);
     });
   };
+  
+  // https://github.com/swgoh-utils/swgoh-comlink/wiki/Getting-Started#getguildleaderboard
+  async getGuildLeaderboard(leaderboardType, defId, monthOffset, count, enums = false) {
+    const requestObject = {
+      "payload": {
+        "leaderboardId":[
+          { 
+            "leaderboardType": leaderboardType,
+            "defId": defId || null,
+            "monthOffset": monthOffset || 0
+          }
+        ],
+        "count": count
+      },
+      "enums": enums  
+    };
+    
+    return await this._postRequestPromiseAPI(`/getGuildLeaderboard`, requestObject).catch((error) => {
+      throw (error);
+    });
+  };
 };

@@ -68,6 +68,10 @@ const postMethodArray = [
     method: 'getPlayerArenaProfile',
     path: '/playerArena',
     parameters: [null, 'aPlayerId', true]
+  }], [{
+    method: 'getGuildLeaderboard',
+    path: '/getGuildLeaderboard',
+    parameters: [3, null, 0, 10, false]
   }]
 ];
 
