@@ -23,3 +23,5 @@ init();
 - secretKey: The "private" portion of the key used in HMAC request signing. Defaults to '' which disables HMAC signing of requests
 - compression: Indicates whether the client will accept compressed responses and decompress them. Defaults to true
 - statsUrl: the url of the swgoh-stats service, such as `http://localhost:3223`
+
+Test
