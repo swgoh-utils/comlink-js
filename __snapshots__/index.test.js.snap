@@ -145,6 +145,35 @@ exports[`ComlinkStub API bindings post stub method getGuild should create the pa
 ]
 `;
 
+exports[`ComlinkStub API bindings post stub method getGuildLeaderboard should create the payload, and send it 1`] = `
+[
+  "http://localhost:3000/getGuildLeaderboard",
+  {
+    "decompress": true,
+    "headers": {
+      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=1b86e9b7d090b207adbaa562abd4c7959d2ef266ed23bdb6ead0d20d54837b31",
+      "X-Date": "1660422866714",
+    },
+    "json": {
+      "enums": false,
+      "payload": {
+        "count": 10,
+        "leaderboardId": [
+          {
+            "defId": null,
+            "leaderboardType": 3,
+            "monthOffset": 0,
+          },
+        ],
+      },
+    },
+    "method": "POST",
+    "resolveBodyOnly": true,
+    "responseType": "json",
+  },
+]
+`;
+
 exports[`ComlinkStub API bindings post stub method getGuildsByCriteria should create the payload, and send it 1`] = `
 [
   "http://localhost:3000/getGuilds",

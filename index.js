@@ -176,6 +176,26 @@ module.exports = class ComlinkStub {
     });
   };
 
+  async getGuildLeaderboard(leaderboardType, defId, monthOffset, count, enums = false) {
+    const requestObject = {
+      "payload": {
+        "leaderboardId":[
+          {
+            "leaderboardType": leaderboardType,
+            "defId": defId || null,
+            "monthOffset": monthOffset || 0
+          }
+        ],
+        "count": count
+      },
+      "enums": enums
+    };
+
+    return await this._postRequestPromiseAPI(`/getGuildLeaderboard`, requestObject).catch((error) => {
+      throw (error);
+    });
+  };
+
   async getGuildsByCriteria(searchCriteria = {}, startIndex = 0, count = 10) {
     const requestObject = {
       "payload": {
