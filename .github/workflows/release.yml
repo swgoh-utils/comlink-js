@@ -5,23 +5,42 @@ on:
     branches:
       - main
 
+permissions:
+  # to enable use of OIDC for trusted publishing and npm provenance
+  id-token: write
+  # to be able to publish a GitHub release
+  contents: write
+  # to be able to comment on released issues
+  issues: write
+  # to be able to comment on released pull requests
+  pull-requests: write
+
 jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          persist-credentials: false
-      - uses: actions/setup-node@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: "lts/*"
-      - run: npm ci
-      - run: npm run build --if-present
-      - run: npm test
-      - run: npx semantic-release
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install dependencies
+        run: npm clean-install
+
+      - name: Verify integrity of provenance attestations and registry signatures for dependencies
+        run: npm audit signatures
+
+      - name: Unit tests
+        run: npm test
+
+      - name: Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release

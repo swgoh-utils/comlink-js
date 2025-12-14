@@ -1,6 +1,6 @@
 {
   "name": "@swgoh-utils/comlink",
-  "version": "1.4.1",
+  "version": "1.0.0",
   "description": "A js library for connecting to swgoh-comlink and associated swgoh-utils",
   "main": "index.js",
   "scripts": {
@@ -23,12 +23,11 @@
   },
   "homepage": "https://github.com/swgoh-utils/comlink-js#readme",
   "dependencies": {
-    "got": "^11.8.5"
+    "got": "^11.8.6"
   },
   "devDependencies": {
-    "@semantic-release/git": "^10.0.1",
-    "conventional-changelog-conventionalcommits": "^5.0.0",
-    "jest": "^28.1.1",
-    "semantic-release": "^19.0.3"
+    "conventional-changelog-conventionalcommits": "^9.1.0",
+    "jest": "^30.2.0",
+    "semantic-release": "^25.0.2"
   }
 }
