@@ -1,9 +1,9 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`ComlinkStub API bindings get stub method getEnums should get the appropriate path 1`] = `
-Array [
+[
   "http://localhost:3000/enums",
-  Object {
+  {
     "decompress": true,
     "method": "GET",
     "resolveBodyOnly": true,
@@ -13,9 +13,9 @@ Array [
 `;
 
 exports[`ComlinkStub API bindings it should disable asking for compressed responses if specified it should disable compression for GET methods 1`] = `
-Array [
+[
   "http://localhost:3000/enums",
-  Object {
+  {
     "decompress": false,
     "method": "GET",
     "resolveBodyOnly": true,
@@ -25,11 +25,11 @@ Array [
 `;
 
 exports[`ComlinkStub API bindings it should disable asking for compressed responses if specified it should disable compression for POST methods 1`] = `
-Array [
+[
   "http://localhost:3000/metadata",
-  Object {
+  {
     "decompress": false,
-    "headers": Object {},
+    "headers": {},
     "json": undefined,
     "method": "POST",
     "resolveBodyOnly": true,
@@ -39,12 +39,12 @@ Array [
 `;
 
 exports[`ComlinkStub API bindings post stub method getEvents should create the payload, and send it 1`] = `
-Array [
+[
   "http://localhost:3000/getEvents",
-  Object {
+  {
     "decompress": true,
-    "headers": Object {
-      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=ded8025b662c17fc23450f95c08a6eba1a41b2716e3303e3e182f4f1a7e06fcd",
+    "headers": {
+      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=103a45096e7c193aed79a3bcb79017b108de0174d914db7376f8a2804f0bc850",
       "X-Date": "1660422866714",
     },
     "json": undefined,
@@ -56,16 +56,16 @@ Array [
 `;
 
 exports[`ComlinkStub API bindings post stub method getGameData should create the payload, and send it 1`] = `
-Array [
+[
   "http://localhost:3000/data",
-  Object {
+  {
     "decompress": true,
-    "headers": Object {
+    "headers": {
       "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=43cac83fc28147d8102aaf7c3115ce7570154586baea26786f1b10bf11686794",
       "X-Date": "1660422866714",
     },
-    "json": Object {
-      "payload": Object {
+    "json": {
+      "payload": {
         "includePveUnits": "false",
         "requestSegment": 2,
         "version": "versionString",
@@ -78,17 +78,40 @@ Array [
 ]
 `;
 
-exports[`ComlinkStub API bindings post stub method getGuild should create the payload, and send it 1`] = `
-Array [
-  "http://localhost:3000/guild",
-  Object {
+exports[`ComlinkStub API bindings post stub method getGameDataWithItems should create the payload, and send it 1`] = `
+[
+  "http://localhost:3000/data",
+  {
     "decompress": true,
-    "headers": Object {
+    "headers": {
+      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=147c870c800f842497f4ace0a1fbe884fb128f497c473b35efd788a535546079",
+      "X-Date": "1660422866714",
+    },
+    "json": {
+      "payload": {
+        "includePveUnits": "false",
+        "items": "4",
+        "version": "versionString",
+      },
+    },
+    "method": "POST",
+    "resolveBodyOnly": true,
+    "responseType": "json",
+  },
+]
+`;
+
+exports[`ComlinkStub API bindings post stub method getGuild should create the payload, and send it 1`] = `
+[
+  "http://localhost:3000/guild",
+  {
+    "decompress": true,
+    "headers": {
       "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=62b43cb133a8b22150616c3205fe31b8b7ab431db290307592d7e02799425db0",
       "X-Date": "1660422866714",
     },
-    "json": Object {
-      "payload": Object {
+    "json": {
+      "payload": {
         "guildId": "idString",
         "includeRecentGuildActivityInfo": false,
       },
@@ -101,16 +124,16 @@ Array [
 `;
 
 exports[`ComlinkStub API bindings post stub method getGuild should create the payload, and send it 2`] = `
-Array [
+[
   "http://localhost:3000/guild",
-  Object {
+  {
     "decompress": true,
-    "headers": Object {
+    "headers": {
       "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=b030919a3206feb8d7c28eb461b1959149a94b2d391a9e430cfbf5404e42044b",
       "X-Date": "1660422866714",
     },
-    "json": Object {
-      "payload": Object {
+    "json": {
+      "payload": {
         "guildId": "idString",
         "includeRecentGuildActivityInfo": true,
       },
@@ -123,19 +146,19 @@ Array [
 `;
 
 exports[`ComlinkStub API bindings post stub method getGuildsByCriteria should create the payload, and send it 1`] = `
-Array [
+[
   "http://localhost:3000/getGuilds",
-  Object {
+  {
     "decompress": true,
-    "headers": Object {
+    "headers": {
       "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=ac6b7c426195aa7eb28b1c8d755a50c768bcac2e071d26d590f1bf5da6d4e013",
       "X-Date": "1660422866714",
     },
-    "json": Object {
-      "payload": Object {
+    "json": {
+      "payload": {
         "count": 5,
         "filterType": 5,
-        "searchCriteria": Object {
+        "searchCriteria": {
           "foo": "bar",
         },
         "startIndex": 1,
@@ -149,16 +172,16 @@ Array [
 `;
 
 exports[`ComlinkStub API bindings post stub method getGuildsByName should create the payload, and send it 1`] = `
-Array [
+[
   "http://localhost:3000/getGuilds",
-  Object {
+  {
     "decompress": true,
-    "headers": Object {
+    "headers": {
       "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=97fe9f671840f166c7d5fe0cc2638f05aad59e676ac4cb30ff050adde6fbea8e",
       "X-Date": "1660422866714",
     },
-    "json": Object {
-      "payload": Object {
+    "json": {
+      "payload": {
         "count": 5,
         "filterType": 4,
         "name": "name",
@@ -173,16 +196,16 @@ Array [
 `;
 
 exports[`ComlinkStub API bindings post stub method getLocalizationBundle should create the payload, and send it 1`] = `
-Array [
+[
   "http://localhost:3000/localization",
-  Object {
+  {
     "decompress": true,
-    "headers": Object {
+    "headers": {
       "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=efb1ec3382f33032741c45b64b1c70aec877ce55645713c7ecc1a7fe95a393a6",
       "X-Date": "1660422866714",
     },
-    "json": Object {
-      "payload": Object {
+    "json": {
+      "payload": {
         "id": "idString",
       },
       "unzip": false,
@@ -195,16 +218,16 @@ Array [
 `;
 
 exports[`ComlinkStub API bindings post stub method getLocalizationBundle should create the payload, and send it 2`] = `
-Array [
+[
   "http://localhost:3000/localization",
-  Object {
+  {
     "decompress": true,
-    "headers": Object {
+    "headers": {
       "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=ff30d647181844239077da3d244e70cb246b59158ed048da9e0993137f53cff9",
       "X-Date": "1660422866714",
     },
-    "json": Object {
-      "payload": Object {
+    "json": {
+      "payload": {
         "id": "idString",
       },
       "unzip": true,
@@ -217,12 +240,12 @@ Array [
 `;
 
 exports[`ComlinkStub API bindings post stub method getMetaData should create the payload, and send it 1`] = `
-Array [
+[
   "http://localhost:3000/metadata",
-  Object {
+  {
     "decompress": true,
-    "headers": Object {
-      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=c06d27fe2ec2a682cc79864b61df8cb4372a6df21b3e716ead52f2958d166e53",
+    "headers": {
+      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=259920f145c9ace5e75b6cb8d3848170d137a2d95c91ba76af179356fbd0d753",
       "X-Date": "1660422866714",
     },
     "json": undefined,
@@ -233,17 +256,59 @@ Array [
 ]
 `;
 
-exports[`ComlinkStub API bindings post stub method getPlayer should create the payload, and send it 1`] = `
-Array [
-  "http://localhost:3000/player",
-  Object {
+exports[`ComlinkStub API bindings post stub method getNameSpaces should create the payload, and send it 1`] = `
+[
+  "http://localhost:3000/getNameSpaces",
+  {
     "decompress": true,
-    "headers": Object {
+    "headers": {
+      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=703f7622c7477a961038da92f4d2c36e5e85000b1a403129ad2a86b10f1601f5",
+      "X-Date": "1660422866714",
+    },
+    "json": {
+      "payload": {
+        "onlyCompatible": false,
+      },
+    },
+    "method": "POST",
+    "resolveBodyOnly": true,
+    "responseType": "json",
+  },
+]
+`;
+
+exports[`ComlinkStub API bindings post stub method getNameSpaces should create the payload, and send it 2`] = `
+[
+  "http://localhost:3000/getNameSpaces",
+  {
+    "decompress": true,
+    "headers": {
+      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=dfdce5bd024cb917efedec871d7dfd25e7b7cff35167b782dd80c99f80728a88",
+      "X-Date": "1660422866714",
+    },
+    "json": {
+      "payload": {
+        "onlyCompatible": true,
+      },
+    },
+    "method": "POST",
+    "resolveBodyOnly": true,
+    "responseType": "json",
+  },
+]
+`;
+
+exports[`ComlinkStub API bindings post stub method getPlayer should create the payload, and send it 1`] = `
+[
+  "http://localhost:3000/player",
+  {
+    "decompress": true,
+    "headers": {
       "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=86b6f2bea2c84f0b593d961bfe3571ea05ab8913283d0d5702c9fe093c5e57cb",
       "X-Date": "1660422866714",
     },
-    "json": Object {
-      "payload": Object {
+    "json": {
+      "payload": {
         "allyCode": "123456789",
       },
     },
@@ -255,16 +320,16 @@ Array [
 `;
 
 exports[`ComlinkStub API bindings post stub method getPlayer should create the payload, and send it 2`] = `
-Array [
+[
   "http://localhost:3000/player",
-  Object {
+  {
     "decompress": true,
-    "headers": Object {
+    "headers": {
       "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=9a02a4d5304cf6a70fdcb34515252574ca66cd3ad04d77d23243b94abf141882",
       "X-Date": "1660422866714",
     },
-    "json": Object {
-      "payload": Object {
+    "json": {
+      "payload": {
         "playerId": "aPlayerId",
       },
     },
@@ -276,16 +341,16 @@ Array [
 `;
 
 exports[`ComlinkStub API bindings post stub method getPlayerArenaProfile should create the payload, and send it 1`] = `
-Array [
+[
   "http://localhost:3000/playerArena",
-  Object {
+  {
     "decompress": true,
-    "headers": Object {
+    "headers": {
       "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=a14f7fca084d12566fee1c3ed2116f4dc2ee0bdb0f504f428dfc6987db6b321a",
       "X-Date": "1660422866714",
     },
-    "json": Object {
-      "payload": Object {
+    "json": {
+      "payload": {
         "allyCode": "123456789",
         "playerDetailsOnly": false,
       },
@@ -298,16 +363,16 @@ Array [
 `;
 
 exports[`ComlinkStub API bindings post stub method getPlayerArenaProfile should create the payload, and send it 2`] = `
-Array [
+[
   "http://localhost:3000/playerArena",
-  Object {
+  {
     "decompress": true,
-    "headers": Object {
+    "headers": {
       "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=514068104798219277bb6c26df9faafa2bd3a68027fa2dd6a4ef72bcf262a1ba",
       "X-Date": "1660422866714",
     },
-    "json": Object {
-      "payload": Object {
+    "json": {
+      "payload": {
         "playerDetailsOnly": true,
         "playerId": "aPlayerId",
       },
@@ -319,13 +384,57 @@ Array [
 ]
 `;
 
-exports[`swgoh-stats binding it should call the stats API 1`] = `
-Array [
-  "abc://xyz:42/api",
-  Object {
+exports[`ComlinkStub API bindings post stub method getSegmentedContent should create the payload, and send it 1`] = `
+[
+  "http://localhost:3000/getSegmentedContent",
+  {
     "decompress": true,
-    "json": Array [
-      Object {
+    "headers": {
+      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=9a514faf615819c4a09bc7830a8c56b73a62a2714a4f418ac74bfe95951b4399",
+      "X-Date": "1660422866714",
+    },
+    "json": {
+      "payload": {
+        "acceptLanguage": "ENG_US",
+        "contentNameSpace": "current",
+      },
+    },
+    "method": "POST",
+    "resolveBodyOnly": true,
+    "responseType": "json",
+  },
+]
+`;
+
+exports[`ComlinkStub API bindings post stub method getSegmentedContent should create the payload, and send it 2`] = `
+[
+  "http://localhost:3000/getSegmentedContent",
+  {
+    "decompress": true,
+    "headers": {
+      "Authorization": "HMAC-SHA256 Credential=my-access-key,Signature=8be2b8109d395ed6efd7c728402676e5677419f11c31352cd9c318ae0fc6fe05",
+      "X-Date": "1660422866714",
+    },
+    "json": {
+      "payload": {
+        "acceptLanguage": "not-english",
+        "contentNameSpace": "not-current",
+      },
+    },
+    "method": "POST",
+    "resolveBodyOnly": true,
+    "responseType": "json",
+  },
+]
+`;
+
+exports[`swgoh-stats binding it should call the stats API 1`] = `
+[
+  "abc://xyz:42/api",
+  {
+    "decompress": true,
+    "json": [
+      {
         "foo": "bar",
       },
     ],
@@ -337,12 +446,12 @@ Array [
 `;
 
 exports[`swgoh-stats binding it should handle flags 1`] = `
-Array [
+[
   "abc://xyz:42/api?flags=calcGP,gameStyle",
-  Object {
+  {
     "decompress": true,
-    "json": Array [
-      Object {
+    "json": [
+      {
         "foo": "bar",
       },
     ],
@@ -354,12 +463,12 @@ Array [
 `;
 
 exports[`swgoh-stats binding it should handle flags and languages 1`] = `
-Array [
+[
   "abc://xyz:42/api?flags=onlyGP&language=eng_us",
-  Object {
+  {
     "decompress": true,
-    "json": Array [
-      Object {
+    "json": [
+      {
         "foo": "bar",
       },
     ],
@@ -371,12 +480,12 @@ Array [
 `;
 
 exports[`swgoh-stats binding it should handle languages 1`] = `
-Array [
+[
   "abc://xyz:42/api?language=eng_us",
-  Object {
+  {
     "decompress": true,
-    "json": Array [
-      Object {
+    "json": [
+      {
         "foo": "bar",
       },
     ],

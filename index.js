@@ -2,7 +2,7 @@ const got = require('got');
 const crypto = require('crypto');
 
 // headers are modified in place
-function signPostRequest(accessKey, secretKey, method, uri, headers, body = {}) {
+function signPostRequest(accessKey, secretKey, method, uri, headers, body) {
   // no need to sign if access key and secret key are not present
   if (accessKey && secretKey) {
     const hmac = crypto.createHmac('sha256', secretKey);
@@ -47,6 +47,7 @@ module.exports = class ComlinkStub {
     }
   }
 
+  // convenience method for swgoh-stats
   async getUnitStats(requestPayload, flags = [], lang) {
     let params = (flags && flags.length > 0) ? `?flags=${flags.join(',')}` : '';
 
@@ -123,6 +124,18 @@ module.exports = class ComlinkStub {
     });
   };
 
+  async getGameDataWithItems(version, items, includePveUnits = true) {
+    return await this._postRequestPromiseAPI(`/data`, {
+      "payload": {
+        "version": version,
+        "includePveUnits": includePveUnits,
+        "items": items
+      }
+    }).catch((error) => {
+      throw (error);
+    });
+  };
+
   async getLocalizationBundle(id, unzip = false) {
     return await this._postRequestPromiseAPI(`/localization`, {
       "unzip": unzip ? true : false,
@@ -140,16 +153,12 @@ module.exports = class ComlinkStub {
     });
   };
 
-  async getPlayer(allyCode, playerId) {
-    const requestObject = {
-      "payload": {}
-    };
-    if (allyCode) {
-      requestObject.payload.allyCode = allyCode;
-    } else {
-      requestObject.payload.playerId = playerId;
-    }
-    return await this._postRequestPromiseAPI(`/player`, requestObject).catch((error) => {
+  async getNameSpaces(onlyCompatible = false) {
+    return await this._postRequestPromiseAPI(`/getNameSpaces`, {
+      "payload": {
+        "onlyCompatible": onlyCompatible,
+      }
+    }).catch((error) => {
       throw (error);
     });
   };
@@ -163,21 +172,6 @@ module.exports = class ComlinkStub {
     };
 
     return await this._postRequestPromiseAPI(`/guild`, requestObject).catch((error) => {
-      throw (error);
-    });
-  };
-
-  async getGuildsByName(name, startIndex = 0, count = 10) {
-    const requestObject = {
-      "payload": {
-        filterType: 4,
-        name,
-        startIndex,
-        count
-      }
-    };
-
-    return await this._postRequestPromiseAPI(`/getGuilds`, requestObject).catch((error) => {
       throw (error);
     });
   };
@@ -197,6 +191,35 @@ module.exports = class ComlinkStub {
     });
   };
 
+  async getGuildsByName(name, startIndex = 0, count = 10) {
+    const requestObject = {
+      "payload": {
+        filterType: 4,
+        name,
+        startIndex,
+        count
+      }
+    };
+
+    return await this._postRequestPromiseAPI(`/getGuilds`, requestObject).catch((error) => {
+      throw (error);
+    });
+  };
+
+  async getPlayer(allyCode, playerId) {
+    const requestObject = {
+      "payload": {}
+    };
+    if (allyCode) {
+      requestObject.payload.allyCode = allyCode;
+    } else {
+      requestObject.payload.playerId = playerId;
+    }
+    return await this._postRequestPromiseAPI(`/player`, requestObject).catch((error) => {
+      throw (error);
+    });
+  };
+
   async getPlayerArenaProfile(allyCode, playerId, playerDetailsOnly = false) {
     const requestObject = {
       "payload": {
@@ -209,6 +232,17 @@ module.exports = class ComlinkStub {
       requestObject.payload.playerId = playerId;
     }
     return await this._postRequestPromiseAPI(`/playerArena`, requestObject).catch((error) => {
+      throw (error);
+    });
+  };
+
+  async getSegmentedContent(contentNameSpace = "current", acceptLanguage = "ENG_US") {
+    return await this._postRequestPromiseAPI(`/getSegmentedContent`, {
+      "payload": {
+        "contentNameSpace": contentNameSpace,
+        "acceptLanguage": acceptLanguage,
+      }
+    }).catch((error) => {
       throw (error);
     });
   };
