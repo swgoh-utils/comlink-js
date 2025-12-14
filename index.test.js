@@ -17,21 +17,17 @@ const successResponse = 'Success!';
 
 const postMethodArray = [
   [{
+    method: 'getEvents',
+    path: '/getEvents',
+    parameters: []
+  }], [{
     method: 'getGameData',
     path: '/data',
     parameters: ['versionString', 'false', 2]
   }], [{
-    method: 'getLocalizationBundle',
-    path: '/localization',
-    parameters: ['idString'],
-  }], [{
-    method: 'getLocalizationBundle',
-    path: '/localization',
-    parameters: ['idString', true],
-  }], [{
-    method: 'getEvents',
-    path: '/getEvents',
-    parameters: []
+    method: 'getGameDataWithItems',
+    path: '/data',
+    parameters: ['versionString', '4', 'false']
   }], [{
     method: 'getGuild',
     path: '/guild',
@@ -49,9 +45,25 @@ const postMethodArray = [
     path: '/getGuilds',
     parameters: [{ "foo": "bar" }, 1, 5]
   }], [{
+    method: 'getLocalizationBundle',
+    path: '/localization',
+    parameters: ['idString'],
+  }], [{
+    method: 'getLocalizationBundle',
+    path: '/localization',
+    parameters: ['idString', true],
+  }], [{
     method: 'getMetaData',
     path: '/metadata',
     parameters: []
+  }], [{
+    method: 'getNameSpaces',
+    path: '/getNameSpaces',
+    parameters: []
+  }], [{
+    method: 'getNameSpaces',
+    path: '/getNameSpaces',
+    parameters: [true]
   }], [{
     method: 'getPlayer',
     path: '/player',
@@ -68,6 +80,14 @@ const postMethodArray = [
     method: 'getPlayerArenaProfile',
     path: '/playerArena',
     parameters: [null, 'aPlayerId', true]
+  }], [{
+    method: 'getSegmentedContent',
+    path: '/getSegmentedContent',
+    parameters: []
+  }], [{
+    method: 'getSegmentedContent',
+    path: '/getSegmentedContent',
+    parameters: ['not-current', 'not-english']
   }]
 ];
 
